@@ -378,7 +378,7 @@
       "unlockCondition": "Have Draven drop 1 gold"
     },
     {
-      "name": "Poppy ",
+      "name": "Poppy",
       "cost": 2,
       "traits": [
         "Demacia",
@@ -392,7 +392,7 @@
       "unlockCondition": "Demacian or Yordle with 2 items"
     },
     {
-      "name": "Kennen ",
+      "name": "Kennen",
       "cost": 3,
       "traits": [
         "Ionia",
@@ -418,7 +418,7 @@
       "isTank": false
     },
     {
-      "name": "Tryndamere ",
+      "name": "Tryndamere",
       "cost": 2,
       "traits": [
         "Freljord",
@@ -431,7 +431,7 @@
       "unlockCondition": "Ashe with 2 items equipped"
     },
     {
-      "name": "Graves ",
+      "name": "Graves",
       "cost": 2,
       "traits": [
         "Bilgewater",
@@ -444,7 +444,7 @@
       "unlockCondition": "Twisted Fate with 2 items equipped"
     },
     {
-      "name": "Gwen ",
+      "name": "Gwen",
       "cost": 3,
       "traits": [
         "Shadow Isles",
@@ -457,7 +457,7 @@
       "unlockCondition": "Collect 20 Shadow Isles Souls"
     },
     {
-      "name": "LeBlanc ",
+      "name": "LeBlanc",
       "cost": 3,
       "traits": [
         "Noxus",
@@ -494,7 +494,7 @@
       "isTank": false
     },
     {
-      "name": "Bard ",
+      "name": "Bard",
       "cost": 2,
       "traits": [
         "Caretaker"
@@ -531,7 +531,7 @@
       "isTank": true
     },
     {
-      "name": "Yorick ",
+      "name": "Yorick",
       "cost": 2,
       "traits": [
         "Shadow Isles",
@@ -544,7 +544,7 @@
       "unlockCondition": "2-star Viego with 1 item equipped"
     },
     {
-      "name": "Orianna ",
+      "name": "Orianna",
       "cost": 2,
       "traits": [
         "Piltover",
@@ -800,7 +800,7 @@
       "isTank": false
     },
     {
-      "name": "Nidalee ",
+      "name": "Nidalee",
       "cost": 4,
       "traits": [
         "Ixtal",
@@ -812,7 +812,7 @@
       "isTank": false
     },
     {
-      "name": "Rift Herald ",
+      "name": "Rift Herald",
       "cost": 4,
       "traits": [
         "Void",
@@ -824,7 +824,7 @@
       "isTank": true
     },
     {
-      "name": "Skarner ",
+      "name": "Skarner",
       "cost": 4,
       "traits": [
         "Ixtal"
@@ -835,7 +835,7 @@
       "isTank": true
     },
     {
-      "name": "Diana ",
+      "name": "Diana",
       "cost": 4,
       "traits": [
         "Targon"
@@ -846,7 +846,7 @@
       "isTank": false
     },
     {
-      "name": "Kai'Sa ",
+      "name": "Kai'Sa",
       "cost": 4,
       "traits": [
         "Assimilator",
@@ -859,7 +859,7 @@
       "isTank": false
     },
     {
-      "name": "Renekton ",
+      "name": "Renekton",
       "cost": 4,
       "traits": [
         "Shurima"
@@ -870,7 +870,7 @@
       "isTank": false
     },
     {
-      "name": "Nasus ",
+      "name": "Nasus",
       "cost": 4,
       "traits": [
         "Shurima"
@@ -881,7 +881,7 @@
       "isTank": true
     },
     {
-      "name": "Kalista ",
+      "name": "Kalista",
       "cost": 4,
       "traits": [
         "Shadow Isles",
