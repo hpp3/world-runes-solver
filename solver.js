@@ -50,34 +50,41 @@ class TFTSolver {
         const validTeams = [];
         const maxResults = 1000; // Stop after finding this many valid teams
 
-        // Try all team sizes from 4 to 6 (including Targon)
+        // Try all team sizes from 4 to 8 (including Targon)
         // 4th origin is always Targon
-        for (let teamSize = 4; teamSize <= 6 && validTeams.length < maxResults; teamSize++) {
+        for (let teamSize = 4; teamSize <= 8 && validTeams.length < maxResults; teamSize++) {
             const baseTeamSize = teamSize - 1; // Reserve 1 slot for Targon
-            const combinations = this.generateCombinations(nonTargonChampions, baseTeamSize);
 
-            for (const baseTeam of combinations) {
+            // Use generator for lazy evaluation - no memory explosion!
+            for (const baseTeam of this.generateCombinationsLazy(nonTargonChampions, baseTeamSize)) {
                 if (validTeams.length >= maxResults) break;
+
+                // FAST PRUNING: Skip if can't possibly hit 4 origins
+                if (!this.canHitFourOrigins(baseTeam, emblems)) continue;
 
                 // Try adding each Targon champion
                 for (const targonChamp of targonChampions) {
+                    if (validTeams.length >= maxResults) break;
+
                     const team = [...baseTeam, targonChamp];
 
-                    // Check if team activates 4 origins (base + emblems + Targon)
-                    const teamOrigins = this.getActiveOrigins(team, emblems);
+                    // Calculate traits ONCE (optimization: was calculated 3x before)
+                    const traitCounts = this.getTraitCounts(team, emblems);
+                    const teamOrigins = this.getActiveOriginsFromCounts(traitCounts);
                     if (teamOrigins.length < 4) continue;
+
+                    // Get active traits from the same trait counts
+                    const activeTraits = this.getActiveTraitsFromCounts(traitCounts);
 
                     // Calculate tank/carry counts
                     const tankCount = team.filter(c => c.isTank).length;
                     const carryCount = team.length - tankCount;
 
-                    // Calculate score (includes balance penalty)
+                    // Calculate score (reuse activeTraits)
                     const score = this.scoreTeam(team, emblems, tankPercentage);
 
-                    // Calculate effective cost (4-costs already owned = 0 cost)
-                    const totalCost = team.reduce((sum, c) => {
-                        return sum + (this.selectedFourCosts.has(c.name) ? 0 : c.cost);
-                    }, 0);
+                    // Calculate effective cost
+                    const totalCost = this.getTotalCost(team);
 
                     validTeams.push({
                         champions: team,
@@ -86,7 +93,7 @@ class TFTSolver {
                         tankCount,
                         carryCount,
                         totalCost,
-                        traits: this.getActiveTraits(team, emblems)
+                        traits: activeTraits
                     });
                 }
             }
@@ -222,26 +229,134 @@ class TFTSolver {
     }
 
     /**
-     * Generate all combinations of size k from array
+     * Generate combinations lazily using a generator
+     * Memory efficient: yields one combination at a time
      */
-    generateCombinations(array, k) {
-        const combinations = [];
-
-        const helper = (start, combo) => {
+    *generateCombinationsLazy(array, k) {
+        function* helper(start, combo) {
             if (combo.length === k) {
-                combinations.push([...combo]);
+                yield [...combo];
                 return;
             }
 
             for (let i = start; i < array.length; i++) {
                 combo.push(array[i]);
-                helper(i + 1, combo);
+                yield* helper(i + 1, combo);
                 combo.pop();
             }
-        };
+        }
 
-        helper(0, []);
-        return combinations;
+        yield* helper(0, []);
+    }
+
+    /**
+     * Count traits from team and emblems (computed once, reused)
+     */
+    getTraitCounts(team, emblems) {
+        const traitCounts = {};
+
+        // Count traits from team
+        team.forEach(champ => {
+            champ.traits.forEach(trait => {
+                traitCounts[trait] = (traitCounts[trait] || 0) + 1;
+            });
+        });
+
+        // Add emblems for origins
+        emblems.forEach(emblem => {
+            if (emblem && this.originNames.has(emblem)) {
+                traitCounts[emblem] = (traitCounts[emblem] || 0) + 1;
+            }
+        });
+
+        return traitCounts;
+    }
+
+    /**
+     * Get active origins from pre-computed trait counts
+     */
+    getActiveOriginsFromCounts(traitCounts) {
+        const activeOrigins = [];
+        for (const [origin, count] of Object.entries(traitCounts)) {
+            if (!this.originNames.has(origin)) continue;
+            const breakpoints = this.traitBreakpoints[origin] || [];
+            if (breakpoints.some(bp => count >= bp)) {
+                activeOrigins.push({ name: origin, count });
+            }
+        }
+        return activeOrigins;
+    }
+
+    /**
+     * Get all active traits from pre-computed trait counts
+     */
+    getActiveTraitsFromCounts(traitCounts) {
+        const activeTraits = [];
+        for (const [trait, count] of Object.entries(traitCounts)) {
+            const breakpoints = this.traitBreakpoints[trait] || [];
+
+            // Find the highest breakpoint we've reached
+            let activeBreakpoint = null;
+            for (const bp of breakpoints) {
+                if (count >= bp) {
+                    activeBreakpoint = bp;
+                }
+            }
+
+            if (activeBreakpoint !== null) {
+                activeTraits.push({
+                    name: trait,
+                    count,
+                    breakpoint: activeBreakpoint,
+                    isOrigin: this.originNames.has(trait)
+                });
+            }
+        }
+        return activeTraits;
+    }
+
+    /**
+     * Fast pruning check: Can this base team + Targon + emblems hit 4 origins?
+     */
+    canHitFourOrigins(baseTeam, emblems) {
+        const originCounts = {};
+        baseTeam.forEach(c => {
+            c.traits.forEach(t => {
+                if (this.originNames.has(t)) {
+                    originCounts[t] = (originCounts[t] || 0) + 1;
+                }
+            });
+        });
+
+        // Add emblems
+        emblems.forEach(emblem => {
+            if (emblem && this.originNames.has(emblem)) {
+                originCounts[emblem] = (originCounts[emblem] || 0) + 1;
+            }
+        });
+
+        // Count origins that can hit their minimum breakpoint
+        let potentialOrigins = 0;
+        for (const [origin, count] of Object.entries(originCounts)) {
+            const minBp = this.traitBreakpoints[origin]?.[0] || 1;
+            if (count >= minBp) {
+                potentialOrigins++;
+            }
+        }
+
+        // Targon always adds 1 (assuming we'll add a Targon champion)
+        potentialOrigins++;
+
+        return potentialOrigins >= 4;
+    }
+
+    /**
+     * Calculate total effective cost (4-costs already owned = 0 cost)
+     */
+    getTotalCost(team) {
+        return team.reduce((sum, c) => {
+            return sum + (this.selectedFourCosts.has(c.name) ? 0 : c.cost);
+        }, 0);
     }
 }
 
