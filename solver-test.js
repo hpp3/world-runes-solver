@@ -48,47 +48,83 @@ class TFTSolver {
 
         // Find all valid teams
         const validTeams = [];
-        const maxResults = 1000; // Stop after finding this many valid teams
+        const maxResults = 500; // Stop after finding this many valid teams
 
         // Try all team sizes from 4 to 6 (including Targon)
-        // 4th origin is always Targon
         for (let teamSize = 4; teamSize <= 6 && validTeams.length < maxResults; teamSize++) {
-            const baseTeamSize = teamSize - 1; // Reserve 1 slot for Targon
-            const combinations = this.generateCombinations(nonTargonChampions, baseTeamSize);
-
-            for (const baseTeam of combinations) {
+            // Try combinations with Targon
+            for (let baseTeamSize = teamSize - 1; baseTeamSize >= 3; baseTeamSize++) {
                 if (validTeams.length >= maxResults) break;
 
-                // Try adding each Targon champion
-                for (const targonChamp of targonChampions) {
-                    const team = [...baseTeam, targonChamp];
+                const combinations = this.generateCombinations(nonTargonChampions, baseTeamSize);
 
-                    // Check if team activates 4 origins (base + emblems + Targon)
-                    const teamOrigins = this.getActiveOrigins(team, emblems);
-                    if (teamOrigins.length < 4) continue;
+                for (const baseTeam of combinations) {
+                    if (validTeams.length >= maxResults) break;
 
-                    // Calculate tank/carry counts
-                    const tankCount = team.filter(c => c.isTank).length;
-                    const carryCount = team.length - tankCount;
+                    // Try adding each Targon champion
+                    for (const targonChamp of targonChampions) {
+                        const team = [...baseTeam, targonChamp];
 
-                    // Calculate score (includes balance penalty)
-                    const score = this.scoreTeam(team, emblems, tankPercentage);
+                        // Check if team activates 4 origins (base + emblems + Targon)
+                        const teamOrigins = this.getActiveOrigins(team, emblems);
+                        if (teamOrigins.length < 4) continue;
 
-                    // Calculate effective cost (4-costs already owned = 0 cost)
-                    const totalCost = team.reduce((sum, c) => {
-                        return sum + (this.selectedFourCosts.has(c.name) ? 0 : c.cost);
-                    }, 0);
+                        // Calculate tank/carry counts
+                        const tankCount = team.filter(c => c.isTank).length;
+                        const carryCount = team.length - tankCount;
 
-                    validTeams.push({
-                        champions: team,
-                        score,
-                        size: team.length,
-                        tankCount,
-                        carryCount,
-                        totalCost,
-                        traits: this.getActiveTraits(team, emblems)
-                    });
+                        // Calculate score (includes balance penalty)
+                        const score = this.scoreTeam(team, emblems, tankPercentage);
+
+                        // Calculate effective cost (4-costs already owned = 0 cost)
+                        const totalCost = team.reduce((sum, c) => {
+                            return sum + (this.selectedFourCosts.has(c.name) ? 0 : c.cost);
+                        }, 0);
+
+                        validTeams.push({
+                            champions: team,
+                            score,
+                            size: team.length,
+                            tankCount,
+                            carryCount,
+                            totalCost,
+                            traits: this.getActiveTraits(team, emblems)
+                        });
+                    }
                 }
+            }
+
+            // Try combinations without Targon (in case team already has 4 origins)
+            const combinations = this.generateCombinations(nonTargonChampions, teamSize);
+
+            for (const team of combinations) {
+                if (validTeams.length >= maxResults) break;
+
+                // Check if team activates 4 origins without Targon
+                const teamOrigins = this.getActiveOrigins(team, emblems);
+                if (teamOrigins.length < 4) continue;
+
+                // Calculate tank/carry counts
+                const tankCount = team.filter(c => c.isTank).length;
+                const carryCount = team.length - tankCount;
+
+                // Calculate score (includes balance penalty)
+                const score = this.scoreTeam(team, emblems, tankPercentage);
+
+                // Calculate effective cost (4-costs already owned = 0 cost)
+                const totalCost = team.reduce((sum, c) => {
+                    return sum + (this.selectedFourCosts.has(c.name) ? 0 : c.cost);
+                }, 0);
+
+                validTeams.push({
+                    champions: team,
+                    score,
+                    size: team.length,
+                    tankCount,
+                    carryCount,
+                    totalCost,
+                    traits: this.getActiveTraits(team, emblems)
+                });
             }
         }
 
@@ -246,4 +282,6 @@ class TFTSolver {
 }
 
 // Make solver available globally
-window.TFTSolver = TFTSolver;
+
+
+module.exports = TFTSolver;
