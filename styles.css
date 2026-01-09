@@ -1,0 +1,655 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #e0e0e0;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+    color: #f39c12;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    color: #bbb;
+    font-size: 1.1em;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.config-panel {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.config-group {
+    margin-bottom: 25px;
+}
+
+.config-group:last-child {
+    margin-bottom: 0;
+}
+
+h2 {
+    color: #3498db;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.help-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: help;
+    color: #888;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.help-icon:hover {
+    color: #3498db;
+}
+
+.help-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Tooltip */
+.tooltip {
+    position: absolute;
+    bottom: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.95);
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: normal;
+    white-space: normal;
+    width: 240px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 1000;
+    line-height: 1.5;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+.tooltip.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-4px);
+}
+
+/* Tooltip arrow */
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.95);
+}
+
+.emblem-picker {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 12px;
+}
+
+.emblem-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+}
+
+.emblem-option:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.emblem-option.selected {
+    border-color: #f39c12;
+    background: rgba(243, 156, 18, 0.1);
+    box-shadow: 0 0 15px rgba(243, 156, 18, 0.4);
+}
+
+.emblem-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #2a2a3e;
+}
+
+.emblem-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.emblem-name {
+    font-size: 0.75em;
+    color: #bbb;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.emblem-option.selected .emblem-name {
+    color: #f39c12;
+    font-weight: bold;
+}
+
+.unlockable-picker {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
+    gap: 8px;
+}
+
+.unlockable-option {
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 3px solid #555;
+    position: relative;
+    overflow: visible;
+    background: #2a2a3e;
+}
+
+.unlockable-option img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+    border-radius: 8px;
+}
+
+.unlockable-option:hover img {
+    filter: brightness(1.2);
+}
+
+/* Cost-based borders for unlockables */
+.unlockable-option.cost-1 {
+    border-color: #999;
+}
+
+.unlockable-option.cost-2 {
+    border-color: #2ecc71;
+}
+
+.unlockable-option.cost-3 {
+    border-color: #3498db;
+}
+
+.unlockable-option.blacklisted {
+    border-color: transparent;
+    opacity: 0.4;
+}
+
+.unlockable-option.blacklisted img {
+    filter: grayscale(100%) brightness(0.5);
+}
+
+/* Lock icon overlay */
+.lock-icon {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    width: 16px;
+    height: 16px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #f39c12;
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* Unlock condition tooltip */
+.unlock-tooltip {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.95);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: normal;
+    white-space: nowrap;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0s, transform 0.2s ease;
+    z-index: 1000;
+    line-height: 1.4;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.unlock-tooltip.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-4px);
+}
+
+/* Unlock tooltip arrow */
+.unlock-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.95);
+}
+
+.four-cost-picker {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
+    gap: 8px;
+}
+
+.four-cost-option {
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+    background: #2a2a3e;
+}
+
+.four-cost-option img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(80%) brightness(0.5);
+    transition: filter 0.3s ease;
+}
+
+.four-cost-option:hover img {
+    filter: grayscale(80%) brightness(0.7);
+}
+
+.four-cost-option.selected {
+    border-color: #9b59b6;
+    box-shadow: 0 0 15px rgba(155, 89, 182, 0.5);
+}
+
+.four-cost-option.selected img {
+    filter: grayscale(0%) brightness(1);
+}
+
+.four-cost-option input[type="checkbox"] {
+    display: none;
+}
+
+.solve-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.solve-button:hover {
+    background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
+}
+
+.solve-button:active {
+    transform: translateY(0);
+}
+
+.solve-button:disabled {
+    background: #555;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.results-panel {
+    min-height: 300px;
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+}
+
+.loading.hidden {
+    display: none;
+}
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.results-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.placeholder {
+    text-align: center;
+    color: #888;
+    padding: 40px;
+    font-size: 1.1em;
+}
+
+.team-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.team-card:hover {
+    border-color: #3498db;
+    box-shadow: 0 5px 20px rgba(52, 152, 219, 0.2);
+}
+
+.team-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.team-stats {
+    display: flex;
+    gap: 12px;
+    font-size: 0.85em;
+    color: #bbb;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.stat-label {
+    color: #888;
+}
+
+.stat-value {
+    color: #3498db;
+    font-weight: bold;
+}
+
+.team-content {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.champions-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+}
+
+.champion-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 6px;
+    border: 3px solid #555;
+    background: #2a2a3e;
+    position: relative;
+    overflow: visible;
+}
+
+.champion-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Cost-based borders */
+.champion-icon.cost-1 {
+    border-color: #999;
+}
+
+.champion-icon.cost-2 {
+    border-color: #2ecc71;
+}
+
+.champion-icon.cost-3 {
+    border-color: #3498db;
+}
+
+.champion-icon.cost-4 {
+    border-color: #9b59b6;
+}
+
+/* Dual champion with split border */
+.champion-icon.dual {
+    border: none;
+    position: relative;
+}
+
+.champion-icon.dual::before,
+.champion-icon.dual::after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+.champion-icon.dual::before {
+    left: 0;
+    top: 0;
+    width: calc(50% + 1.5px);
+    height: 100%;
+    border-top: 3px solid #2ecc71;
+    border-left: 3px solid #2ecc71;
+    border-bottom: 3px solid #2ecc71;
+    border-radius: 8px 0 0 8px;
+}
+
+.champion-icon.dual::after {
+    right: 0;
+    top: 0;
+    width: calc(50% + 1.5px);
+    height: 100%;
+    border-top: 3px solid #3498db;
+    border-right: 3px solid #3498db;
+    border-bottom: 3px solid #3498db;
+    border-radius: 0 8px 8px 0;
+}
+
+.champion-icon .dual-left,
+.champion-icon .dual-right {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.champion-icon .dual-left {
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+.champion-icon .dual-right {
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+
+.traits-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    flex: 1;
+}
+
+.trait-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    font-size: 0.8em;
+    border: 1.5px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.trait-pill:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.trait-pill.origin {
+    border-color: #f39c12;
+}
+
+.trait-pill.class {
+    border-color: #3498db;
+}
+
+.trait-pill .trait-icon {
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.trait-pill .trait-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.trait-pill .trait-name {
+    color: #e0e0e0;
+    font-weight: 500;
+}
+
+.trait-pill .trait-count {
+    color: #fff;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1px 4px;
+    border-radius: 4px;
+    min-width: 16px;
+    text-align: center;
+}
+
+.trait-pill .trait-emblem {
+    font-size: 0.9em;
+    filter: drop-shadow(0 0 2px #f39c12);
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    color: #888;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #f39c12;
+}
+
+@media (max-width: 768px) {
+    .emblem-picker {
+        grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    }
+
+    .traits-section {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .four-cost-picker {
+        grid-template-columns: repeat(auto-fill, minmax(48px, 1fr));
+    }
+
+    .four-cost-option {
+        width: 48px;
+        height: 48px;
+    }
+}

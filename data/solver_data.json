@@ -1,0 +1,1558 @@
+{
+  "champions": [
+    {
+      "name": "Tristana",
+      "cost": 2,
+      "traits": [
+        "Yordle",
+        "Gunslinger"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Tristana/HUD/TFT16_Tristana_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Tristana",
+      "role": "ADCaster",
+      "isTank": false
+    },
+    {
+      "name": "Lulu",
+      "cost": 1,
+      "traits": [
+        "Yordle",
+        "Arcanist"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Lulu/HUD/TFT16_Lulu_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Lulu",
+      "role": "APCaster",
+      "isTank": false
+    },
+    {
+      "name": "Teemo",
+      "cost": 2,
+      "traits": [
+        "Yordle",
+        "Longshot"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Teemo/HUD/TFT16_Teemo_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Teemo",
+      "role": "APCaster",
+      "isTank": false
+    },
+    {
+      "name": "Rumble",
+      "cost": 1,
+      "traits": [
+        "Yordle",
+        "Defender"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Rumble/HUD/TFT16_Rumble_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Rumble",
+      "role": "APTank",
+      "isTank": true
+    },
+    {
+      "name": "Nautilus",
+      "cost": 3,
+      "traits": [
+        "Bilgewater",
+        "Juggernaut",
+        "Warden"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Nautilus/HUD/TFT16_Nautilus_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Nautilus",
+      "role": "APTank",
+      "isTank": true
+    },
+    {
+      "name": "Twisted Fate",
+      "cost": 2,
+      "traits": [
+        "Bilgewater",
+        "Quickstriker"
+      ],
+      "icon": "ASSETS/Characters/TFT16_TwistedFate/HUD/TFT16_TwistedFate_Square.TFT_Set16.tex",
+      "apiName": "TFT16_TwistedFate",
+      "role": "APSpecialist",
+      "isTank": false
+    },
+    {
+      "name": "Gangplank",
+      "cost": 3,
+      "traits": [
+        "Bilgewater",
+        "Slayer",
+        "Vanquisher"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Gangplank/HUD/TFT16_Gangplank_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Gangplank",
+      "role": "ADFighter",
+      "isTank": false
+    },
+    {
+      "name": "Illaoi",
+      "cost": 1,
+      "traits": [
+        "Bilgewater",
+        "Bruiser"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Illaoi/HUD/TFT16_Illaoi_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Illaoi",
+      "role": "ADTank",
+      "isTank": true
+    },
+    {
+      "name": "Sion",
+      "cost": 2,
+      "traits": [
+        "Noxus",
+        "Bruiser"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Sion/HUD/TFT16_Sion_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Sion",
+      "role": "APTank",
+      "isTank": true
+    },
+    {
+      "name": "Briar",
+      "cost": 1,
+      "traits": [
+        "Noxus",
+        "Slayer",
+        "Juggernaut"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Briar/HUD/TFT16_Briar_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Briar",
+      "role": "ADReaper",
+      "isTank": false
+    },
+    {
+      "name": "Draven",
+      "cost": 3,
+      "traits": [
+        "Noxus",
+        "Quickstriker"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Draven/HUD/TFT16_Draven_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Draven",
+      "role": "ADCarry",
+      "isTank": false
+    },
+    {
+      "name": "Leona",
+      "cost": 3,
+      "traits": [
+        "Targon"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Leona/HUD/TFT16_Leona_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Leona",
+      "role": "APTank",
+      "isTank": true
+    },
+    {
+      "name": "Aphelios",
+      "cost": 2,
+      "traits": [
+        "Targon"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Aphelios/HUD/TFT16_Aphelios_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Aphelios",
+      "role": "ADCarry",
+      "isTank": false
+    },
+    {
+      "name": "Jarvan IV",
+      "cost": 1,
+      "traits": [
+        "Demacia",
+        "Defender"
+      ],
+      "icon": "ASSETS/Characters/TFT16_JarvanIV/HUD/TFT16_JarvanIV_Square.TFT_Set16.tex",
+      "apiName": "TFT16_JarvanIV",
+      "role": "APTank",
+      "isTank": true
+    },
+    {
+      "name": "Sona",
+      "cost": 1,
+      "traits": [
+        "Demacia",
+        "Invoker"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Sona/HUD/TFT16_Sona_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Sona",
+      "role": "APCaster",
+      "isTank": false
+    },
+    {
+      "name": "Anivia",
+      "cost": 1,
+      "traits": [
+        "Freljord",
+        "Invoker"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Anivia/HUD/TFT16_Anivia_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Anivia",
+      "role": "APCaster",
+      "isTank": false
+    },
+    {
+      "name": "Ashe",
+      "cost": 2,
+      "traits": [
+        "Freljord",
+        "Quickstriker"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Ashe/HUD/TFT16_Ashe_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Ashe",
+      "role": "ADCarry",
+      "isTank": false
+    },
+    {
+      "name": "Milio",
+      "cost": 3,
+      "traits": [
+        "Ixtal",
+        "Invoker"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Milio/HUD/TFT16_Milio_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Milio",
+      "role": "APCaster",
+      "isTank": false
+    },
+    {
+      "name": "Neeko",
+      "cost": 2,
+      "traits": [
+        "Ixtal",
+        "Arcanist",
+        "Defender"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Neeko/HUD/TFT16_Neeko_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Neeko",
+      "role": "APTank",
+      "isTank": true
+    },
+    {
+      "name": "Jinx",
+      "cost": 3,
+      "traits": [
+        "Zaun",
+        "Gunslinger"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Jinx/HUD/TFT16_Jinx_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Jinx",
+      "role": "ADSpecialist",
+      "isTank": false
+    },
+    {
+      "name": "Caitlyn",
+      "cost": 1,
+      "traits": [
+        "Piltover",
+        "Longshot"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Caitlyn/HUD/TFT16_Caitlyn_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Caitlyn",
+      "role": "ADCaster",
+      "isTank": false
+    },
+    {
+      "name": "Vi",
+      "cost": 2,
+      "traits": [
+        "Piltover",
+        "Zaun",
+        "Defender"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Vi/HUD/TFT16_Vi_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Vi",
+      "role": "ADFighter",
+      "isTank": false
+    },
+    {
+      "name": "Yasuo",
+      "cost": 2,
+      "traits": [
+        "Ionia",
+        "Slayer"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Yasuo/HUD/TFT16_Yasuo_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Yasuo",
+      "role": "ADFighter",
+      "isTank": false
+    },
+    {
+      "name": "Ahri",
+      "cost": 3,
+      "traits": [
+        "Ionia",
+        "Arcanist"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Ahri/HUD/TFT16_Ahri_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Ahri",
+      "role": "APCaster",
+      "isTank": false
+    },
+    {
+      "name": "Shen",
+      "cost": 1,
+      "traits": [
+        "Ionia",
+        "Bruiser"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Shen/HUD/TFT16_Shen_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Shen",
+      "role": "APTank",
+      "isTank": true
+    },
+    {
+      "name": "Malzahar",
+      "cost": 3,
+      "traits": [
+        "Void",
+        "Disruptor"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Malzahar/HUD/TFT16_Malzahar_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Malzahar",
+      "role": "APCaster",
+      "isTank": false
+    },
+    {
+      "name": "Rek'Sai",
+      "cost": 2,
+      "traits": [
+        "Void",
+        "Vanquisher"
+      ],
+      "icon": "ASSETS/Characters/TFT16_RekSai/HUD/TFT16_RekSai_Square.TFT_Set16.tex",
+      "apiName": "TFT16_RekSai",
+      "role": "ADReaper",
+      "isTank": false
+    },
+    {
+      "name": "Cho'Gath",
+      "cost": 2,
+      "traits": [
+        "Void",
+        "Juggernaut"
+      ],
+      "icon": "ASSETS/Characters/TFT16_ChoGath/HUD/TFT16_ChoGath_Square.TFT_Set16.tex",
+      "apiName": "TFT16_ChoGath",
+      "role": "APTank",
+      "isTank": true
+    },
+    {
+      "name": "Kog'Maw",
+      "cost": 1,
+      "traits": [
+        "Void",
+        "Arcanist",
+        "Longshot"
+      ],
+      "icon": "ASSETS/Characters/TFT16_KogMaw/HUD/TFT16_KogMaw_Square.TFT_Set16.tex",
+      "apiName": "TFT16_KogMaw",
+      "role": "APCaster",
+      "isTank": false
+    },
+    {
+      "name": "Sejuani",
+      "cost": 3,
+      "traits": [
+        "Freljord",
+        "Defender"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Sejuani/HUD/TFT16_Sejuani_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Sejuani",
+      "role": "APTank",
+      "isTank": true
+    },
+    {
+      "name": "Darius",
+      "cost": 3,
+      "traits": [
+        "Noxus",
+        "Defender"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Darius/HUD/TFT16_Darius_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Darius",
+      "role": "ADTank",
+      "isTank": true,
+      "unlockCondition": "Have Draven drop 1 gold"
+    },
+    {
+      "name": "Poppy ",
+      "cost": 2,
+      "traits": [
+        "Demacia",
+        "Yordle",
+        "Juggernaut"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Poppy/HUD/TFT16_Poppy_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Poppy",
+      "role": "ADTank",
+      "isTank": true,
+      "unlockCondition": "Demacian or Yordle with 2 items"
+    },
+    {
+      "name": "Kennen ",
+      "cost": 3,
+      "traits": [
+        "Ionia",
+        "Yordle",
+        "Defender"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Kennen/HUD/TFT16_Kennen_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Kennen",
+      "role": "APTank",
+      "isTank": true,
+      "unlockCondition": "8 unique star levels of Ionia, Yordle, or Defender"
+    },
+    {
+      "name": "Jhin",
+      "cost": 1,
+      "traits": [
+        "Ionia",
+        "Gunslinger"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Jhin/HUD/TFT16_Jhin_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Jhin",
+      "role": "ADCarry",
+      "isTank": false
+    },
+    {
+      "name": "Tryndamere ",
+      "cost": 2,
+      "traits": [
+        "Freljord",
+        "Slayer"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Tryndamere/HUD/TFT16_Tryndamere_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Tryndamere",
+      "role": "ADFighter",
+      "isTank": false,
+      "unlockCondition": "Ashe with 2 items equipped"
+    },
+    {
+      "name": "Graves ",
+      "cost": 2,
+      "traits": [
+        "Bilgewater",
+        "Gunslinger"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Graves/HUD/TFT16_Graves_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Graves",
+      "role": "ADFighter",
+      "isTank": false,
+      "unlockCondition": "Twisted Fate with 2 items equipped"
+    },
+    {
+      "name": "Gwen ",
+      "cost": 3,
+      "traits": [
+        "Shadow Isles",
+        "Disruptor"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Gwen/HUD/TFT16_Gwen_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Gwen",
+      "role": "APFighter",
+      "isTank": false,
+      "unlockCondition": "Collect 20 Shadow Isles Souls"
+    },
+    {
+      "name": "LeBlanc ",
+      "cost": 3,
+      "traits": [
+        "Noxus",
+        "Invoker"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Leblanc/HUD/TFT16_Leblanc_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Leblanc",
+      "role": "APCaster",
+      "isTank": false,
+      "unlockCondition": "Sion with 2 items equipped"
+    },
+    {
+      "name": "Viego",
+      "cost": 1,
+      "traits": [
+        "Shadow Isles",
+        "Quickstriker"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Viego/HUD/TFT16_Viego_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Viego",
+      "role": "HFighter",
+      "isTank": false
+    },
+    {
+      "name": "Ekko",
+      "cost": 2,
+      "traits": [
+        "Zaun",
+        "Disruptor"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Ekko/HUD/TFT16_Ekko_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Ekko",
+      "role": "APFighter",
+      "isTank": false
+    },
+    {
+      "name": "Bard ",
+      "cost": 2,
+      "traits": [
+        "Caretaker"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Bard/HUD/TFT16_Bard_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Bard",
+      "role": "APCaster",
+      "isTank": false,
+      "unlockCondition": "Reroll 4 times before Stage 2 Carousel"
+    },
+    {
+      "name": "Vayne",
+      "cost": 3,
+      "traits": [
+        "Demacia",
+        "Longshot"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Vayne/HUD/TFT16_Vayne_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Vayne",
+      "role": "ADCarry",
+      "isTank": false
+    },
+    {
+      "name": "Xin Zhao",
+      "cost": 2,
+      "traits": [
+        "Demacia",
+        "Ionia",
+        "Warden"
+      ],
+      "icon": "ASSETS/Characters/TFT16_XinZhao/HUD/TFT16_XinZhao_Square.TFT_Set16.tex",
+      "apiName": "TFT16_XinZhao",
+      "role": "ADTank",
+      "isTank": true
+    },
+    {
+      "name": "Yorick ",
+      "cost": 2,
+      "traits": [
+        "Shadow Isles",
+        "Warden"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Yorick/HUD/TFT16_Yorick_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Yorick",
+      "role": "APTank",
+      "isTank": true,
+      "unlockCondition": "2-star Viego with 1 item equipped"
+    },
+    {
+      "name": "Orianna ",
+      "cost": 2,
+      "traits": [
+        "Piltover",
+        "Invoker"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Orianna/HUD/TFT16_Orianna_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Orianna",
+      "role": "APCaster",
+      "isTank": false,
+      "unlockCondition": "2 unique Piltover units"
+    },
+    {
+      "name": "Qiyana",
+      "cost": 1,
+      "traits": [
+        "Ixtal",
+        "Slayer"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Qiyana/HUD/TFT16_Qiyana_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Qiyana",
+      "role": "ADFighter",
+      "isTank": false
+    },
+    {
+      "name": "Loris",
+      "cost": 3,
+      "traits": [
+        "Piltover",
+        "Warden"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Loris/HUD/TFT16_Loris_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Loris",
+      "role": "APTank",
+      "isTank": true
+    },
+    {
+      "name": "Blitzcrank",
+      "cost": 1,
+      "traits": [
+        "Zaun",
+        "Juggernaut"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Blitzcrank/HUD/TFT16_Blitzcrank_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Blitzcrank",
+      "role": "APTank",
+      "isTank": true
+    },
+    {
+      "name": "Dr. Mundo",
+      "cost": 3,
+      "traits": [
+        "Zaun",
+        "Bruiser"
+      ],
+      "icon": "ASSETS/Characters/TFT16_DrMundo/HUD/TFT16_DrMundo_Square.TFT_Set16.tex",
+      "apiName": "TFT16_DrMundo",
+      "role": "ADTank",
+      "isTank": true
+    },
+    {
+      "name": "Kobuko & Yuumi",
+      "cost": 3,
+      "traits": [
+        "Yordle",
+        "Bruiser",
+        "Invoker"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Kobuko/HUD/TFT16_Kobuko_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Kobuko",
+      "role": "APTank",
+      "isTank": true,
+      "unlockCondition": "6 unique star levels of Yordle, Bruiser, or Invoker"
+    }
+  ],
+  "fourCostChampions": [
+    {
+      "name": "Miss Fortune",
+      "cost": 4,
+      "traits": [
+        "Bilgewater",
+        "Gunslinger"
+      ],
+      "icon": "ASSETS/Characters/TFT16_MissFortune/HUD/TFT16_MissFortune_Square.TFT_Set16.tex",
+      "apiName": "TFT16_MissFortune",
+      "role": "ADCaster",
+      "isTank": false
+    },
+    {
+      "name": "Ambessa",
+      "cost": 4,
+      "traits": [
+        "Noxus",
+        "Vanquisher"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Ambessa/HUD/TFT16_Ambessa_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Ambessa",
+      "role": "ADFighter",
+      "isTank": false
+    },
+    {
+      "name": "Taric",
+      "cost": 4,
+      "traits": [
+        "Targon"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Taric/HUD/TFT16_Taric_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Taric",
+      "role": "APTank",
+      "isTank": true
+    },
+    {
+      "name": "Garen",
+      "cost": 4,
+      "traits": [
+        "Demacia",
+        "Defender"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Garen/HUD/TFT16_Garen_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Garen",
+      "role": "ADTank",
+      "isTank": true
+    },
+    {
+      "name": "Lux",
+      "cost": 4,
+      "traits": [
+        "Demacia",
+        "Arcanist"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Lux/HUD/TFT16_Lux_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Lux",
+      "role": "APCaster",
+      "isTank": false
+    },
+    {
+      "name": "Braum",
+      "cost": 4,
+      "traits": [
+        "Freljord",
+        "Warden"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Braum/HUD/TFT16_Braum_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Braum",
+      "role": "APTank",
+      "isTank": true
+    },
+    {
+      "name": "Lissandra",
+      "cost": 4,
+      "traits": [
+        "Freljord",
+        "Invoker"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Lissandra/HUD/TFT16_Lissandra_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Lissandra",
+      "role": "APCaster",
+      "isTank": false
+    },
+    {
+      "name": "Seraphine",
+      "cost": 4,
+      "traits": [
+        "Piltover",
+        "Disruptor"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Seraphine/HUD/TFT16_Seraphine_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Seraphine",
+      "role": "APCaster",
+      "isTank": false
+    },
+    {
+      "name": "Wukong",
+      "cost": 4,
+      "traits": [
+        "Ionia",
+        "Bruiser"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Wukong/HUD/TFT16_Wukong_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Wukong",
+      "role": "ADTank",
+      "isTank": true
+    },
+    {
+      "name": "Bel'Veth",
+      "cost": 4,
+      "traits": [
+        "Void",
+        "Slayer"
+      ],
+      "icon": "ASSETS/Characters/TFT16_BelVeth/HUD/TFT16_BelVeth_Square.TFT_Set16.tex",
+      "apiName": "TFT16_BelVeth",
+      "role": "ADFighter",
+      "isTank": false
+    },
+    {
+      "name": "Singed",
+      "cost": 4,
+      "traits": [
+        "Zaun",
+        "Juggernaut"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Singed/HUD/TFT16_Singed_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Singed",
+      "role": "APFighter",
+      "isTank": false
+    },
+    {
+      "name": "Veigar",
+      "cost": 4,
+      "traits": [
+        "Yordle",
+        "Arcanist"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Veigar/HUD/TFT16_Veigar_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Veigar",
+      "role": "APCaster",
+      "isTank": false
+    },
+    {
+      "name": "Yone",
+      "cost": 4,
+      "traits": [
+        "Ionia",
+        "Slayer"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Yone/HUD/TFT16_Yone_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Yone",
+      "role": "HFighter",
+      "isTank": false
+    },
+    {
+      "name": "Warwick",
+      "cost": 4,
+      "traits": [
+        "Zaun",
+        "Quickstriker"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Warwick/HUD/TFT16_Warwick_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Warwick",
+      "role": "ADFighter",
+      "isTank": false
+    },
+    {
+      "name": "Fizz",
+      "cost": 4,
+      "traits": [
+        "Bilgewater",
+        "Yordle"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Fizz/HUD/TFT16_Fizz_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Fizz",
+      "role": "APReaper",
+      "isTank": false
+    },
+    {
+      "name": "Nidalee ",
+      "cost": 4,
+      "traits": [
+        "Ixtal",
+        "Huntress"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Nidalee/HUD/TFT16_Nidalee_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Nidalee",
+      "role": "APFighter",
+      "isTank": false
+    },
+    {
+      "name": "Rift Herald ",
+      "cost": 4,
+      "traits": [
+        "Void",
+        "Bruiser"
+      ],
+      "icon": "ASSETS/Characters/TFT16_RiftHerald/Skins/Base/Images/TFT16_RiftHerald_splash_tile_0.TFT_Set16.tex",
+      "apiName": "TFT16_RiftHerald",
+      "role": "APTank",
+      "isTank": true
+    },
+    {
+      "name": "Skarner ",
+      "cost": 4,
+      "traits": [
+        "Ixtal"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Skarner/HUD/TFT16_Skarner_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Skarner",
+      "role": "ADTank",
+      "isTank": true
+    },
+    {
+      "name": "Diana ",
+      "cost": 4,
+      "traits": [
+        "Targon"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Diana/HUD/TFT16_Diana_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Diana",
+      "role": "APReaper",
+      "isTank": false
+    },
+    {
+      "name": "Kai'Sa ",
+      "cost": 4,
+      "traits": [
+        "Assimilator",
+        "Void",
+        "Longshot"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Kaisa/HUD/TFT16_Kaisa_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Kaisa",
+      "role": "ADCasterFormSwapper",
+      "isTank": false
+    },
+    {
+      "name": "Renekton ",
+      "cost": 4,
+      "traits": [
+        "Shurima"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Renekton/HUD/TFT16_Renekton_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Renekton",
+      "role": "ADFighter",
+      "isTank": false
+    },
+    {
+      "name": "Nasus ",
+      "cost": 4,
+      "traits": [
+        "Shurima"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Nasus/HUD/TFT16_Nasus_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Nasus",
+      "role": "APTank",
+      "isTank": true
+    },
+    {
+      "name": "Kalista ",
+      "cost": 4,
+      "traits": [
+        "Shadow Isles",
+        "Vanquisher"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Kalista/HUD/TFT16_Kalista_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Kalista",
+      "role": "ADCaster",
+      "isTank": false
+    },
+    {
+      "name": "Yunara",
+      "cost": 4,
+      "traits": [
+        "Ionia",
+        "Quickstriker"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Yunara/HUD/TFT16_Yunara_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Yunara",
+      "role": "ADCarry",
+      "isTank": false
+    },
+    {
+      "name": "Swain",
+      "cost": 4,
+      "traits": [
+        "Noxus",
+        "Arcanist",
+        "Juggernaut"
+      ],
+      "icon": "ASSETS/Characters/TFT16_Swain/HUD/TFT16_Swain_Square.TFT_Set16.tex",
+      "apiName": "TFT16_Swain",
+      "role": "APTank",
+      "isTank": true
+    }
+  ],
+  "origins": [
+    {
+      "name": "Freljord",
+      "apiName": "TFT16_Freljord",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Freljord.TFT_Set16.tex",
+      "isOrigin": true,
+      "breakpoints": [
+        3,
+        5,
+        7
+      ],
+      "emblemIcon": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set16/TFT16_Emblem_Freljord.TFT_Set16.tex"
+    },
+    {
+      "name": "Ixtal",
+      "apiName": "TFT16_Explorer",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Ixtal.TFT_Set16.tex",
+      "isOrigin": true,
+      "breakpoints": [
+        3,
+        5,
+        7
+      ],
+      "emblemIcon": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set16/TFT16_Emblem_Ixtal.TFT_Set16.tex"
+    },
+    {
+      "name": "Piltover",
+      "apiName": "TFT16_Piltover",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Piltover.TFT_Set16.tex",
+      "isOrigin": true,
+      "breakpoints": [
+        2,
+        4,
+        6
+      ],
+      "emblemIcon": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set16/TFT16_Emblem_Piltover.TFT_Set16.tex"
+    },
+    {
+      "name": "Void",
+      "apiName": "TFT16_Void",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Void.TFT_Set16.tex",
+      "isOrigin": true,
+      "breakpoints": [
+        2,
+        4,
+        6,
+        9
+      ],
+      "emblemIcon": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set16/TFT16_Emblem_Void.TFT_Set16.tex"
+    },
+    {
+      "name": "Demacia",
+      "apiName": "TFT16_Demacia",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Demacia.TFT_Set16.tex",
+      "isOrigin": true,
+      "breakpoints": [
+        3,
+        5,
+        7,
+        11
+      ],
+      "emblemIcon": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set16/TFT16_Emblem_Demacia.TFT_Set16.tex"
+    },
+    {
+      "name": "Bilgewater",
+      "apiName": "TFT16_Bilgewater",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_9_Bilgewater.tex",
+      "isOrigin": true,
+      "breakpoints": [
+        3,
+        5,
+        7,
+        10
+      ],
+      "emblemIcon": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set16/TFT16_Emblem_Bilgewater.TFT_Set16.tex"
+    },
+    {
+      "name": "Targon",
+      "apiName": "TFT16_Targon",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Targon.TFT_Set16.tex",
+      "isOrigin": true,
+      "breakpoints": [
+        1
+      ],
+      "emblemIcon": null
+    },
+    {
+      "name": "Shurima",
+      "apiName": "TFT16_Shurima",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.TFT_Set16.tex",
+      "isOrigin": true,
+      "breakpoints": [
+        2,
+        3,
+        4
+      ],
+      "emblemIcon": null
+    },
+    {
+      "name": "Shadow Isles",
+      "apiName": "TFT16_ShadowIsles",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_ShadowIsles.TFT_Set16.tex",
+      "isOrigin": true,
+      "breakpoints": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "emblemIcon": null
+    },
+    {
+      "name": "Noxus",
+      "apiName": "TFT16_Noxus",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Noxus.TFT_Set16.tex",
+      "isOrigin": true,
+      "breakpoints": [
+        3,
+        5,
+        7,
+        10
+      ],
+      "emblemIcon": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set16/TFT16_Emblem_Noxus.TFT_Set16.tex"
+    },
+    {
+      "name": "Yordle",
+      "apiName": "TFT16_Yordle",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Yordle.TFT_Set16.tex",
+      "isOrigin": true,
+      "breakpoints": [
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "emblemIcon": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set16/TFT16_Emblem_Yordle.TFT_Set16.tex"
+    },
+    {
+      "name": "Zaun",
+      "apiName": "TFT16_Zaun",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Zaun.TFT_Set16.tex",
+      "isOrigin": true,
+      "breakpoints": [
+        3,
+        5,
+        7
+      ],
+      "emblemIcon": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set16/TFT16_Emblem_Zaun.TFT_Set16.tex"
+    },
+    {
+      "name": "Ionia",
+      "apiName": "TFT16_Ionia",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Ionia.TFT_Set16.tex",
+      "isOrigin": true,
+      "breakpoints": [
+        3,
+        5,
+        7,
+        10
+      ],
+      "emblemIcon": "ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set16/TFT16_Emblem_Ionia.TFT_Set16.tex"
+    }
+  ],
+  "classes": [
+    {
+      "name": "Juggernaut",
+      "apiName": "TFT16_Juggernaut",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Juggernaut.tex",
+      "isOrigin": false,
+      "breakpoints": [
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "name": "Quickstriker",
+      "apiName": "TFT16_Rapidfire",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Quickstriker.tex",
+      "isOrigin": false,
+      "breakpoints": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "name": "Longshot",
+      "apiName": "TFT16_Longshot",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Longshot.TFT_Set16.tex",
+      "isOrigin": false,
+      "breakpoints": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "name": "Vanquisher",
+      "apiName": "TFT16_Vanquisher",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Vanquisher.tex",
+      "isOrigin": false,
+      "breakpoints": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "name": "Caretaker",
+      "apiName": "TFT16_Caretaker",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Caretaker.TFT_Set16.tex",
+      "isOrigin": false,
+      "breakpoints": [
+        1
+      ]
+    },
+    {
+      "name": "Slayer",
+      "apiName": "TFT16_Slayer",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Slayer.tex",
+      "isOrigin": false,
+      "breakpoints": [
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "name": "Arcanist",
+      "apiName": "TFT16_Sorcerer",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_6_Arcanist.tex",
+      "isOrigin": false,
+      "breakpoints": [
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "name": "Gunslinger",
+      "apiName": "TFT16_Gunslinger",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Gunslinger.TFT_Set16.tex",
+      "isOrigin": false,
+      "breakpoints": [
+        2,
+        4
+      ]
+    },
+    {
+      "name": "Assimilator",
+      "apiName": "TFT16_KaisaUnique",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Assimilator.TFT_Set16.tex",
+      "isOrigin": false,
+      "breakpoints": [
+        1
+      ]
+    },
+    {
+      "name": "Disruptor",
+      "apiName": "TFT16_Magus",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Disruptor.tex",
+      "isOrigin": false,
+      "breakpoints": [
+        2,
+        4
+      ]
+    },
+    {
+      "name": "Invoker",
+      "apiName": "TFT16_Invoker",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Invoker.tex",
+      "isOrigin": false,
+      "breakpoints": [
+        2,
+        4
+      ]
+    },
+    {
+      "name": "Bruiser",
+      "apiName": "TFT16_Brawler",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Bruiser.TFT_Set16.tex",
+      "isOrigin": false,
+      "breakpoints": [
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "name": "Warden",
+      "apiName": "TFT16_Warden",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Warden.TFT_Set16.tex",
+      "isOrigin": false,
+      "breakpoints": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "name": "Defender",
+      "apiName": "TFT16_Defender",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Defender.tex",
+      "isOrigin": false,
+      "breakpoints": [
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "name": "Huntress",
+      "apiName": "TFT16_Huntress",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Huntress.TFT_Set16.tex",
+      "isOrigin": false,
+      "breakpoints": [
+        1
+      ]
+    }
+  ],
+  "traits": [
+    {
+      "name": "Freljord",
+      "apiName": "TFT16_Freljord",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Freljord.TFT_Set16.tex",
+      "isOrigin": true,
+      "breakpoints": [
+        3,
+        5,
+        7
+      ]
+    },
+    {
+      "name": "Juggernaut",
+      "apiName": "TFT16_Juggernaut",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Juggernaut.tex",
+      "isOrigin": false,
+      "breakpoints": [
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "name": "Quickstriker",
+      "apiName": "TFT16_Rapidfire",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Quickstriker.tex",
+      "isOrigin": false,
+      "breakpoints": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "name": "Longshot",
+      "apiName": "TFT16_Longshot",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Longshot.TFT_Set16.tex",
+      "isOrigin": false,
+      "breakpoints": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "name": "Vanquisher",
+      "apiName": "TFT16_Vanquisher",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Vanquisher.tex",
+      "isOrigin": false,
+      "breakpoints": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "name": "Caretaker",
+      "apiName": "TFT16_Caretaker",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Caretaker.TFT_Set16.tex",
+      "isOrigin": false,
+      "breakpoints": [
+        1
+      ]
+    },
+    {
+      "name": "Ixtal",
+      "apiName": "TFT16_Explorer",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Ixtal.TFT_Set16.tex",
+      "isOrigin": true,
+      "breakpoints": [
+        3,
+        5,
+        7
+      ]
+    },
+    {
+      "name": "Slayer",
+      "apiName": "TFT16_Slayer",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Slayer.tex",
+      "isOrigin": false,
+      "breakpoints": [
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "name": "Arcanist",
+      "apiName": "TFT16_Sorcerer",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_6_Arcanist.tex",
+      "isOrigin": false,
+      "breakpoints": [
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "name": "Gunslinger",
+      "apiName": "TFT16_Gunslinger",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Gunslinger.TFT_Set16.tex",
+      "isOrigin": false,
+      "breakpoints": [
+        2,
+        4
+      ]
+    },
+    {
+      "name": "Piltover",
+      "apiName": "TFT16_Piltover",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Piltover.TFT_Set16.tex",
+      "isOrigin": true,
+      "breakpoints": [
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "name": "Assimilator",
+      "apiName": "TFT16_KaisaUnique",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Assimilator.TFT_Set16.tex",
+      "isOrigin": false,
+      "breakpoints": [
+        1
+      ]
+    },
+    {
+      "name": "Disruptor",
+      "apiName": "TFT16_Magus",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Disruptor.tex",
+      "isOrigin": false,
+      "breakpoints": [
+        2,
+        4
+      ]
+    },
+    {
+      "name": "Void",
+      "apiName": "TFT16_Void",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Void.TFT_Set16.tex",
+      "isOrigin": true,
+      "breakpoints": [
+        2,
+        4,
+        6,
+        9
+      ]
+    },
+    {
+      "name": "Invoker",
+      "apiName": "TFT16_Invoker",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Invoker.tex",
+      "isOrigin": false,
+      "breakpoints": [
+        2,
+        4
+      ]
+    },
+    {
+      "name": "Demacia",
+      "apiName": "TFT16_Demacia",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Demacia.TFT_Set16.tex",
+      "isOrigin": true,
+      "breakpoints": [
+        3,
+        5,
+        7,
+        11
+      ]
+    },
+    {
+      "name": "Bilgewater",
+      "apiName": "TFT16_Bilgewater",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_9_Bilgewater.tex",
+      "isOrigin": true,
+      "breakpoints": [
+        3,
+        5,
+        7,
+        10
+      ]
+    },
+    {
+      "name": "Targon",
+      "apiName": "TFT16_Targon",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Targon.TFT_Set16.tex",
+      "isOrigin": true,
+      "breakpoints": [
+        1
+      ]
+    },
+    {
+      "name": "Shurima",
+      "apiName": "TFT16_Shurima",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.TFT_Set16.tex",
+      "isOrigin": true,
+      "breakpoints": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "name": "Shadow Isles",
+      "apiName": "TFT16_ShadowIsles",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_ShadowIsles.TFT_Set16.tex",
+      "isOrigin": true,
+      "breakpoints": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "name": "Noxus",
+      "apiName": "TFT16_Noxus",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Noxus.TFT_Set16.tex",
+      "isOrigin": true,
+      "breakpoints": [
+        3,
+        5,
+        7,
+        10
+      ]
+    },
+    {
+      "name": "Yordle",
+      "apiName": "TFT16_Yordle",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Yordle.TFT_Set16.tex",
+      "isOrigin": true,
+      "breakpoints": [
+        2,
+        4,
+        6,
+        8,
+        10
+      ]
+    },
+    {
+      "name": "Zaun",
+      "apiName": "TFT16_Zaun",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Zaun.TFT_Set16.tex",
+      "isOrigin": true,
+      "breakpoints": [
+        3,
+        5,
+        7
+      ]
+    },
+    {
+      "name": "Bruiser",
+      "apiName": "TFT16_Brawler",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Bruiser.TFT_Set16.tex",
+      "isOrigin": false,
+      "breakpoints": [
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "name": "Warden",
+      "apiName": "TFT16_Warden",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Warden.TFT_Set16.tex",
+      "isOrigin": false,
+      "breakpoints": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "name": "Ionia",
+      "apiName": "TFT16_Ionia",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Ionia.TFT_Set16.tex",
+      "isOrigin": true,
+      "breakpoints": [
+        3,
+        5,
+        7,
+        10
+      ]
+    },
+    {
+      "name": "Defender",
+      "apiName": "TFT16_Defender",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Defender.tex",
+      "isOrigin": false,
+      "breakpoints": [
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "name": "Huntress",
+      "apiName": "TFT16_Huntress",
+      "icon": "ASSETS/UX/TraitIcons/Trait_Icon_16_Huntress.TFT_Set16.tex",
+      "isOrigin": false,
+      "breakpoints": [
+        1
+      ]
+    }
+  ]
+}
